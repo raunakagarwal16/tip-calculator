@@ -1,0 +1,113 @@
+h2 {
+  font-size: 30px;
+  text-align: center;
+  padding: 0px 40px;
+  color: hsl(187, 27%, 62%);
+}
+.body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+}
+.box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 12px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+  width: 42rem;
+  margin: auto;
+}
+.Container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 15rem;
+
+  padding: 0.2rem;
+}
+
+label p {
+  color: hsl(256, 86%, 23%);
+}
+
+.bill-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: inherit;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+
+  flex-direction: row;
+  width: inherit;
+  flex-flow: wrap;
+}
+
+.button {
+  width: 4rem;
+  height: 1.4rem;
+  margin: 0.2rem;
+  color: hsl(188, 25%, 82%);
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.custom {
+  width: 4rem;
+  height: 1.4rem;
+  margin: 0.2rem;
+  background-color: hsl(188, 25%, 82%);
+  color: hsl(183, 100%, 15%);
+  border-radius: 5px;
+}
+.inputBill {
+  width: inherit;
+}
+
+.container2 {
+  background-color: hsl(183, 100%, 15%);
+}
+.content {
+  color: rgb(195, 223, 223);
+}
+.light {
+  color: hsl(184, 14%, 56%);
+}
+
+.outputContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 14rem;
+  background-color: rgb(17, 107, 52);
+  margin: 2%;
+  padding: 2%;
+  border-radius: 0.6rem;
+}
+.output {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.display {
+  font-weight: 700;
+  color: rgb(163, 201, 185);
+  font-size: x-large;
+}
+
+.reset {
+  width: 90%;
+  background-color: aquamarine;
+  color: rgb(4, 29, 82);
+  padding: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+}
