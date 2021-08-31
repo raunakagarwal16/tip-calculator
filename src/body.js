@@ -56,7 +56,7 @@ const Body = () => {
 
   return (
     <div className="body">
-      <h2>Spliter</h2>
+      <h2>Spliter bill</h2>
       <div className="box">
         <div className="Container">
           <div className="bill-container">
