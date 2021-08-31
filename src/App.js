@@ -1,8 +1,5 @@
-
-import './App.css';
-import Body from './body';
-
-
+import "./App.css";
+import Body from "./body";
 
 function App() {
   return (
