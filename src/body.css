@@ -9,25 +9,32 @@ h2 {
   justify-content: center;
   flex-direction: column;
   margin: auto;
+  background-color: rgba(163, 241, 215, 0.623);
+  background-size: 100%;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 .box {
+  box-sizing: border-box;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   border-radius: 12px;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
-  width: 42rem;
+  width: 65%;
   margin: auto;
+  background-color: whitesmoke;
 }
 .Container {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: center;
-  width: 15rem;
+  align-items: flex-start;
+  width: 45%;
 
-  padding: 0.2rem;
+  padding: 2rem;
 }
 
 label p {
@@ -38,7 +45,7 @@ label p {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: inherit;
+  width: 100%;
 }
 
 .buttonContainer {
@@ -46,13 +53,13 @@ label p {
   justify-content: space-between;
 
   flex-direction: row;
-  width: inherit;
+  width: 80%;
   flex-flow: wrap;
 }
 
 .button {
-  width: 4rem;
-  height: 1.4rem;
+  width: 25%;
+  height: 40%;
   margin: 0.2rem;
   color: hsl(188, 25%, 82%);
   background-color: hsl(183, 100%, 15%);
@@ -60,15 +67,18 @@ label p {
   cursor: pointer;
 }
 .custom {
-  width: 4rem;
-  height: 1.4rem;
+  width: 25%;
+  height: 40%;
   margin: 0.2rem;
   background-color: hsl(188, 25%, 82%);
   color: hsl(183, 100%, 15%);
   border-radius: 5px;
 }
-.inputBill {
-  width: inherit;
+.inputBill,
+#people {
+  width: 80%;
+  height: 1.3rem;
+  border: none;
 }
 
 .container2 {
@@ -85,7 +95,7 @@ label p {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  width: 14rem;
+  width: 45%;
   background-color: rgb(17, 107, 52);
   margin: 2%;
   padding: 2%;
@@ -110,4 +120,16 @@ label p {
   padding: 0.5rem;
   cursor: pointer;
   font-weight: 600;
+}
+
+@media (max-width: 690px) {
+  .box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .Container,
+  .outputContainer {
+    width: 90%;
+  }
 }
