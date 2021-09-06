@@ -1,5 +1,5 @@
 import { div } from "prelude-ls";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./body.css";
 
 const Body = () => {
@@ -8,13 +8,14 @@ const Body = () => {
 
   const [tipOutput, setTipOutput] = useState("");
   const [customInput, setCustomInput] = useState("");
+  const [totalOutput, setTotalOutput] = useState();
 
   const amountChangeHandler = (e) => {
     setBillAmount(e.target.value);
   };
   const noOfPEopleChange = (e) => {
     setNoOfPeople(e.target.value);
-    customTip();
+    // customTip();
   };
   const customInputHandler = (e) => {
     setCustomInput(e.target.value);
@@ -28,10 +29,10 @@ const Body = () => {
     setCustomInput("");
   };
 
-  const customTip = () => {
-    // if (customInput !== "") {
-    setTipOutput(totalOutput * (customInput / 100));
-  };
+  // const customTip = () => {
+  //   // if (customInput !== "") {
+  //   setTipOutput(totalOutput * (customInput / 100));
+  // };
   const btnHandler = (percentValue) => {
     setTipOutput(totalOutput * (percentValue / 100));
   };
@@ -48,8 +49,23 @@ const Body = () => {
   //         }
 
   //     }
-  const totalOutput = billAmount / noOfPeople;
+  // if (billAmount > 0 && noOfPeople > 0) {
+  //   totalOutput = billAmount / noOfPeople;
+  // }
 
+  useEffect(() => {
+    // const customTip = () =>
+
+    // if (customInput !== "") {
+
+    if (billAmount > 0 && noOfPeople > 0) {
+      setTotalOutput(billAmount / noOfPeople);
+    } else {
+      setTotalOutput("rs 00.00");
+    }
+
+    setTipOutput(totalOutput * (customInput / 100));
+  }, [totalOutput, customInput, billAmount, noOfPeople]);
   // billAmount/noOfPeople
 
   //   if
@@ -104,9 +120,6 @@ const Body = () => {
               id="people"
               onChange={noOfPEopleChange}
             />
-            <button className="button" onClick={customTip}>
-              check
-            </button>
           </div>
         </div>
 
